@@ -18,7 +18,10 @@
     "@azure/identity": "^4.10.1",
     "@azure/storage-queue": "^12.26.0",
     "axios": "^1.10.0",
+    "botbuilder": "^4.17.0-blobs1",
+    "botframework-connector": "^4.17.0-blobs1",
     "cheerio": "^1.1.0",
+    "fast-xml-parser": "^5.2.5",
     "jsdom": "^26.1.0",
     "turndown": "^7.2.0"
   },

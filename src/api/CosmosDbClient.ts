@@ -22,6 +22,18 @@ export interface CosmosDbConfig {
   clientSecret?: string;
 }
 
+export function createCosmosDbConfigFromEnvironment(): CosmosDbConfig {
+  const cosmosEndpoint = process.env.COSMOS_DB_ENDPOINT;
+  return {
+    endpoint: cosmosEndpoint,
+    useEntraId: true,
+    // Optional: For local development with service principal
+    tenantId: process.env.AZURE_TENANT_ID,
+    clientId: process.env.AZURE_CLIENT_ID,
+    clientSecret: process.env.AZURE_CLIENT_SECRET,
+  };
+}
+
 export class CosmosDbClient {
   private client: CosmosClient;
   private database: Database;
